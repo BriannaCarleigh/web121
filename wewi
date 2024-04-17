@@ -1,0 +1,30 @@
+git init
+
+def calculator():
+    operand1 = float(input("Enter the first operand: "))
+    operator = input("Enter the operator (+, -, *, /): ")
+    operand2 = float(input("Enter the second operand: "))
+
+    if operator == '+':
+        result = operand1 + operand2
+    elif operator == '-':
+        result = operand1 - operand2
+    elif operator == '*':
+        result = operand1 * operand2
+    elif operator == '/':
+        if operand2 != 0:
+            result = operand1 / operand2
+        else:
+            result = "Error! Division by zero."
+    else:
+        result = "Error! Invalid operator."
+
+    print("Result:", result)
+
+calculator()
+git add .
+git commit -m "Implemented user input"
+git add .
+git commit -m "Implemented calculation component"
+git add .
+git commit -m "Implemented displaying the result"
